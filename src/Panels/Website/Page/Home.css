@@ -1,0 +1,728 @@
+.container-main {
+  overflow-x: hidden;
+}
+/*header section*/
+.header {
+  background-color: #192C4C;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+}
+.Logo {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 34;
+  cursor: pointer;
+  color:#D4780C;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+ 
+}
+
+.header .tab {
+  font-family: "Marcellus", serif;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
+  color: #D4780C;
+  
+}
+.number {
+  margin-top: 10px;
+  margin-right: 30px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  color: #D4780C;
+}
+.login {
+  background-color:#D4780C;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #D4780C;
+  font-family: "Montserrat", serif;
+  font-weight: 600;
+}
+
+.login:hover {
+  background-color: #fff;
+  border: 1px solid #121212;
+  color: #121212;
+}
+.close {
+  background-color: #121212;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #fff;
+  font-family: "Montserrat", serif;
+  font-weight: 600;
+  margin-bottom: 10%;
+}
+.modal-title {
+  font-family: "Red Hat Display" sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+}
+.caption {
+  font-family: "Red Hat Display" sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.modal-body label {
+  display: block;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.modal-body input[type="text"],
+.modal-body input[type="phonenumber"],
+.Cmodal-body input[type="email"] {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #27272a;
+  border-radius: 4px;
+}
+
+/*hero section*/
+.hero-background {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.hero-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://img.squareyards.com/secondaryPortal/638527803029114927-310524072502252.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: blur(10px);
+  /* Adjust the blur radius as needed */
+  z-index: -1;
+}
+
+.hero-section-1 h1 {
+  font-family: "Marcellus", serif;
+  font-size: 54px;
+  font-weight: 500;
+  color:#192C4C;
+}
+.hero-section-1 h3 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 20px;
+  color: #192C4C;
+ 
+}
+.hero-section-1 span {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  color:#D4780C;
+}
+.button {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  border-width: 0;
+  padding: 0 8px 12px;
+  min-width: 10em;
+  box-sizing: border-box;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.button-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  padding: 8px 16px;
+  transform: translateY(0);
+  text-align: center;
+  color: #D4780C;
+  text-shadow: 0 -3px rgba(0, 0, 0, .50);
+  transition-property: transform;
+  transition-duration: .2s;
+  -webkit-user-select: none;
+  user-select: none;
+  font-weight: 700;
+}
+
+.button:active .button-top {
+  transform: translateY(6px);
+}
+
+.button-top::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  background-image: radial-gradient(#192C4C, #192C4C); /* Changed color */
+  text-align: center;
+  color: #fff;
+  box-shadow: inset 0 0 0px 1px rgba(255, 255, 255, .2), 0 1px 2px 1px rgba(255, 255, 255, .2);
+  transition-property: border-radius, padding, width, transform;
+  transition-duration: .2s;
+}
+
+.button:active .button-top::after {
+  border-radius: 6px;
+  padding: 0 2px;
+}
+
+.button-bottom {
+  position: absolute;
+  z-index: -1;
+  bottom: 4px;
+  left: 4px;
+  border-radius: 8px / 16px 16px 8px 8px;
+  padding-top: 6px;
+  width: calc(100% - 8px);
+  height: calc(100% - 10px);
+  box-sizing: content-box;
+  background-color: #192C4C; /* Changed color */
+  background-image: radial-gradient(4px 8px at 4px calc(100% - 8px), rgba(255, 255, 255, .25), transparent), radial-gradient(4px 8px at calc(100% - 4px) calc(100% - 8px), rgba(255, 255, 255, .25), transparent), radial-gradient(16px at -4px 0, rgba(255, 255, 255, .25), transparent), radial-gradient(16px at calc(100% + 4px) 0, rgba(255, 255, 255, .25), transparent);
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5), inset 0 -1px 3px 3px rgba(0, 0, 0, .4);
+  transition-property: border-radius, padding-top;
+  transition-duration: .2s;
+}
+
+.button:active .button-bottom {
+  border-radius: 10px 10px 8px 8px / 8px;
+  padding-top: 0;
+}
+
+.button-base {
+  position: absolute;
+  z-index: -2;
+  top: 4px;
+  left: 0;
+  border-radius: 12px;
+  width: 100%;
+  height: calc(100% - 4px);
+  background-color: #192C4C; /* Changed color */
+  box-shadow: 0 1px 1px 0 rgba(255, 255, 255, .75), inset 0 2px 2px rgba(0, 0, 0, .25);
+}
+
+
+/*About*/
+.About {
+  background-color: #f6f6f6;
+}
+.About .aboutus {
+  padding-top: 20px;
+}
+.About .content h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color:#192C4C;
+}
+.About .content h3 span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color:#D4780C;
+}
+.About .content p {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #27272a;
+}
+.About .content p span {
+  font-family: "Red Hat Display", sans-serif;
+  font-style: italic;
+  font-size: 22px;
+  font-weight: 700;
+  color: #D4780C;
+}
+.Image {
+  width: 260px;
+  height: 260px;
+}
+
+/*Why  Choose Us*/
+.WhyChooseUs {
+  background-color: #fff;
+  padding-top: 40px;
+}
+.WhyChooseUs .row {
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+.WhyChooseUs h3 {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #192C4C;
+}
+
+.WhyChooseUs h3 span {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color:#D4780C;
+}
+
+.WhyChooseUs .row .col-md-4 {
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.WhyChooseUs .row .col-md-4 h5 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  margin-top: 20px;
+  color: #D4780C;
+}
+.WhyChooseUs .row .col-md-4 p {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.WhyChooseUs .row .col-md-4:last-child {
+  border-right: none;
+}
+
+.WhyChooseUs .row .icons {
+  width: 80px;
+  height: 80px;
+}
+
+/*features*/
+.Features {
+  background-color: #f6f6f6;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.Features .heading {
+  margin-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.Features .heading h3 {
+  font-family: "Marcellus", serif;
+  font-size: 38px;
+  color: #192C4C;
+}
+.Features .heading h5 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+
+}
+.Features .heading h5 span {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  font-style: italic;
+  color:#D4780C;
+}
+.Features .details {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+}
+.Features .details .row {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin: 10px;
+}
+.Features .details .row h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+.Features .details .row p {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+}
+.Features .feature-icon {
+  height: 80px;
+  width: 80px;
+}
+
+/*Pricing*/
+.features-scrollable {
+  max-height: 600px; /* Adjust the height as needed */
+  overflow-y: auto;
+  padding-right: 10px; /* Optional: Adds some padding for better scrollbar visibility */
+}
+.Pricing {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background-color: #91A8BA;
+}
+.Pricing .heading {
+  margin-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: #192C4C;
+}
+.Pricing .heading h3 {
+  font-family: "Marcellus", sans-serif;
+  font-size: 38px;
+}
+.Pricing .heading h3 span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color:#D4780C;
+  font-style: italic;
+}
+.Pricing .details {
+  padding: 10px;
+}
+.Pricing .details .row {
+  padding-left: 170px;
+  padding-right: 170px;
+}
+.Pricing .details .row .col-md-6 {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.Pricing .details .row .col-md-6 .standard-card-1 {
+  padding: 20px;
+  background-color: #192C4C;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.Pricing .details .row .col-md-6 .standard-card-2 h5 {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color:#D4780C;
+}
+.Pricing .details .row .col-md-6 .standard-card-2 .features {
+  background-color: #fff;
+  height: 400px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+.Pricing .details .row .col-md-6 .standard-card-2 .features p {
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+}
+.Pricing .details .row .col-md-6 .standard-card-2 .features p .icon {
+  margin-right: 20px;
+  font-size: 18px;
+}
+.Pricing .details .row .col-md-6 .premium-card-1 {
+  padding: 20px;
+  background-color:#192C4C;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.Pricing .details .row .col-md-6 .premium-card-2 h5 {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #D4780C;
+}
+.Pricing .details .row .col-md-6 .premium-card-2 .features {
+  background-color: #fff;
+  height: 400px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+.Pricing .details .row .col-md-6 .premium-card-2 .features p {
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+}
+.Pricing .details .row .col-md-6 .premium-card-2 .features p .icon {
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+/*Contact*/
+.Contact {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.Contact h5 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  padding-left: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  padding-right: 50px;
+  color: #192C4C;
+}
+.Contact h5 span {
+  color:#D4780C;
+}
+.Contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.Contact .col {
+  flex: 1;
+  padding: 0 70px 0 10px;
+}
+.Contact label {
+  display: block;
+  margin-bottom: 5px;
+}
+.Contact input[type="text"],
+.Contact input[type="phonenumber"],
+.Contact input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #27272a;
+  border-radius: 4px;
+}
+
+.Contact .form-select{
+  height:50px;
+  width: 100%;
+  border:1px solid #27272a;
+  border-radius: 4px;
+}
+
+/*Footer*/
+.Footer {
+  background-color:#192C4C;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.Footer .row {
+  padding-left: 0;
+  padding-right: 0;
+}
+.Footer .row .col-md-5 h3 {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+}
+.Footer .row .col-md-5 h6 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  word-spacing: 2px; /* Adjust the value as needed */
+}
+
+.Footer .row .contact h5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.Footer .row .contact a {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+}
+.Footer .row .play h6 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+}
+.Footer .divider {
+  border: 0;
+  height: 2px;
+  background-color: #fff;
+  margin: 20px 0;
+}
+.Footer .copyright {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  
+  margin: 0 20px 20px 20px;
+ 
+}
+.goggle-play {
+  width: 200px;
+  height: 80px;
+}
+.Footer .social-icons .m-1 {
+  color: #f6f6f6;
+  font-size: 24px;
+}
+.social {
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 100%;
+}
+
+.social .social-item {
+  margin: 0 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social .social-item .social-link {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  text-align: center;
+  transform: perspective(1000px) rotate(-30deg) skew(25deg)
+    translate(0, 0);
+  transition: all 0.4s ease;
+}
+
+.social .social-item .social-link::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  height: 100%;
+  width: 10px;
+  background: #b1b1b1;
+  transition: all 0.4s ease;
+  transform: rotate(0deg) skewY(-45deg);
+}
+
+.social .social-item .social-link::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: -5px;
+  height: 10px;
+  width: 100%;
+  background: #b1b1b1;
+  transition: all 0.4s ease;
+  transform: rotate(0deg) skewX(-45deg);
+}
+
+.social .social-item .social-link:hover {
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(5px, -5px);
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.social .social-item:nth-child(1) a {
+  color: #3b5999;
+}
+
+.social .social-item:nth-child(1):hover a {
+  background: #3b5999;
+}
+
+.social .social-item:nth-child(1):hover a::before {
+  background: #3b5999;
+}
+
+.social .social-item:nth-child(1):hover a::after {
+  background: #3b5999;
+}
+
+.social .social-item:nth-child(2) a {
+  color: #55acee;
+}
+
+.social .social-item:nth-child(2):hover a {
+  background: #55acee;
+}
+
+.social .social-item:nth-child(2):hover a::before {
+  background: #55acee;
+}
+
+.social .social-item:nth-child(2):hover a::after {
+  background: #55acee;
+}
+
+.social .social-item:nth-child(3) a {
+  color: #dd4b39;
+}
+
+.social .social-item:nth-child(3):hover a {
+  background: #dd4b39;
+}
+
+.social .social-item:nth-child(3):hover a::before {
+  background: #dd4b39;
+}
+
+.social .social-item:nth-child(3):hover a::after {
+  background: #dd4b39;
+}
+
+.social .social-item:nth-child(4) a {
+  color: #e4405f;
+}
+
+.social .social-item:nth-child(4):hover a {
+  background: #e4405f;
+}
+
+.social .social-item:nth-child(4):hover a::before {
+  background: #e4405f;
+}
+
+.social .social-item:nth-child(4):hover a::after {
+  background: #e4405f;
+}
+
+.social .social-item .social-link:hover {
+  color: #ffffff;
+}
